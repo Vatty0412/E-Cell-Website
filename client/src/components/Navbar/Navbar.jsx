@@ -20,6 +20,7 @@ const Navbar = () => {
           "events",
           "startups",
           "webinars",
+          "Campus Ambassadors",
           "team",
           "contact",
         ].map((item) => (
@@ -48,6 +49,7 @@ const Navbar = () => {
                 "events",
                 "startups",
                 "webinars",
+                "Campus Ambassadors",
                 "team",
                 "contact",
               ].map((item) => (
