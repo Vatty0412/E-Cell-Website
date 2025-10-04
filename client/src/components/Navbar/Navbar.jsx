@@ -1,38 +1,47 @@
 import React, { useState } from "react";
 import { HiMenuAlt4, HiX } from "react-icons/hi";
 import { motion } from "framer-motion";
-import { Link } from "react-scroll";
+import { Link as ScrollLink } from "react-scroll";
+import { Link as RouterLink } from "react-router-dom";
 import logo from "../../assets/logo1.png";
 import "./Navbar.scss";
-
+import { useNavigate } from "react-router-dom";
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
+  const navigate = useNavigate();
+  const allNavItems = [
+    "home",
+    "about",
+    "events",
+    "startups",
+    "webinars",
+    "team",
+    "contact",
+  ];
 
   return (
-    <nav id="app__navbar" className="">
+    <nav id="app__navbar">
+      {/* Logo */}
       <div className="app__navbar-logo">
         <img src={logo} alt="logo" />
       </div>
+
+      {/* Desktop Nav */}
       <ul className="app__navbar-links">
-        {[
-          "home",
-          "about",
-          "events",
-          "startups",
-          "webinars",
-          "Campus Ambassadors",
-          "team",
-          "contact",
-        ].map((item) => (
+        {allNavItems.map((item) => (
           <li className="app__flex p-text" key={`link-${item}`}>
             <div />
-            <Link to={`${item}`} smooth={true} duration={500}>
+            <ScrollLink to={item} smooth={true} duration={500} onClick={() => navigate("/")}>
               {item}
-            </Link>
+            </ScrollLink>
           </li>
         ))}
+        <li className="app__flex p-text">
+          <RouterLink to="/campus-ambassadors">Campus Ambassadors</RouterLink>
+        </li>
       </ul>
 
+      {/* Mobile Hamburger */}
       <div className="app__navbar-menu">
         <HiMenuAlt4 onClick={() => setToggle(true)} />
 
@@ -43,27 +52,26 @@ const Navbar = () => {
           >
             <HiX onClick={() => setToggle(false)} />
             <ul>
-              {[
-                "home",
-                "about",
-                "events",
-                "startups",
-                "webinars",
-                "Campus Ambassadors",
-                "team",
-                "contact",
-              ].map((item) => (
+              {allNavItems.map((item) => (
                 <li key={item}>
-                  <Link
-                    onClick={() => setToggle(false)}
-                    to={`${item}`}
+                  <ScrollLink
+                    onClick={() => { setToggle(false); navigate("/"); }}
+                    to={item}
                     smooth={true}
                     duration={500}
                   >
                     {item}
-                  </Link>
+                  </ScrollLink>
                 </li>
               ))}
+              <li>
+                <RouterLink
+                  to="/campus-ambassadors"
+                  onClick={() => setToggle(false)}
+                >
+                  Campus Ambassadors
+                </RouterLink>
+              </li>
             </ul>
           </motion.div>
         )}

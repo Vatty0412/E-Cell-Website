@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Download } from 'lucide-react';
 
-const CampusAmbassador = () => {
+const CampusAmbassadorPage = () => {
   // Dummy data for campus ambassadors
   const ambassadors = [
     {
@@ -74,37 +74,40 @@ const CampusAmbassador = () => {
   };
 
   return (
-    <div className="xl:py-20 xl:pb-16 sm:py-10" id="Campus Ambassadors">
-      <div className="xl:mx-40 md:mx-20 sm:mx-10">
-        {/* Title Section */}
-        <div className="xl:flex xl:flex-row sm:flex sm:flex-col sm:items-center xl:mb-16 sm:mb-10">
-          <div className="xl:w-2/5 sm:flex sm:flex-col sm:items-center xl:pb-20 sm:pb-10">
-            <div className="bg-stone-400 h-20 w-1 xl:mb-4 sm:mb-8"></div>
-            <motion.div
-              whileInView={{ y: [50, 0], opacity: [0, 1] }}
-              transition={{ duration: 2, ease: "easeOut" }}
-              whileTap={{ scale: 0.9 }}
-              className="text-6xl text-stone-300"
-            >
-              CAMPUS AMBASSADOR
-            </motion.div>
-          </div>
+    <div className="min-h-screen" style={{
+      backgroundImage: "url('./assets/Background2.png')",
+      backgroundSize: "cover",
+      backgroundRepeat: "no-repeat",
+      backgroundAttachment: "fixed",
+      backgroundPosition: "center"
+    }}>
+      {/* Header */}
+      <div className="xl:py-20 xl:pb-16 sm:py-10">
+        <div className="xl:mx-40 md:mx-20 sm:mx-10">
           <motion.div
-            whileInView={{ y: [50, 0], opacity: [0, 1] }}
-            transition={{ duration: 2, ease: "easeOut" }}
-            className="xl:w-3/5 xl:ml-10"
+            initial={{ y: -50, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="text-center"
           >
-            <h2 className="text-4xl text-stone-300 text-center xl:text-left">
+            <div className="bg-stone-400 h-20 w-1 mx-auto mb-8"></div>
+            <h1 className="text-6xl text-stone-300 mb-4">
+              CAMPUS AMBASSADOR
+            </h1>
+            <h2 className="text-4xl text-stone-300 mb-8">
               CERTIFICATES
             </h2>
           </motion.div>
         </div>
+      </div>
 
-        {/* Table Section */}
+      {/* Main Content */}
+      <div className="xl:mx-40 md:mx-20 sm:mx-10">
         <motion.div
-          whileInView={{ y: [50, 0], opacity: [0, 1] }}
-          transition={{ duration: 2, ease: "easeOut" }}
-          className="bg-stone-300 rounded-3xl xl:p-8 md:p-6 sm:p-4"
+          initial={{ y: 50, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
+          className="bg-stone-300 rounded-3xl p-8 shadow-2xl"
         >
           <div className="overflow-x-auto hide-scrollbar">
             <table className="w-full">
@@ -120,7 +123,8 @@ const CampusAmbassador = () => {
                 {ambassadors.map((ambassador, index) => (
                   <motion.tr
                     key={ambassador.certificateId}
-                    whileInView={{ y: [20, 0], opacity: [0, 1] }}
+                    initial={{ y: 20, opacity: 0 }}
+                    animate={{ y: 0, opacity: 1 }}
                     transition={{ duration: 0.5, delay: index * 0.1, ease: "easeOut" }}
                     whileHover={{ scale: 1.02, backgroundColor: "#f5f5f4" }}
                     className="border-b border-gray-300 hover:bg-gray-100 cursor-pointer transition-all duration-300"
@@ -146,8 +150,13 @@ const CampusAmbassador = () => {
           </div>
         </motion.div>
       </div>
+
+      {/* Footer */}
+      <div className="flex justify-center items-center pt-12 pb-8 text-stone-300 h-10">
+        Copyright &copy; E-Cell 2022. All rights reserved
+      </div>
     </div>
   );
 };
 
-export default CampusAmbassador;
+export default CampusAmbassadorPage;
