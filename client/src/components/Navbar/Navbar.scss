@@ -44,7 +44,6 @@
   li {
     margin: 0 1rem;
     cursor: pointer;
-
     flex-direction: column;
 
     div {
@@ -52,7 +51,6 @@
       height: 5px;
       background: transparent;
       border-radius: 50%;
-
       padding-bottom: 5px;
     }
 
@@ -60,10 +58,8 @@
       color: var(--white-color);
       text-decoration: none;
       flex-direction: column;
-
       text-transform: uppercase;
       font-weight: 500;
-
       transition: all 0.3s ease-in-out;
 
       &:hover {
@@ -79,7 +75,7 @@
   }
 
   @media screen and (max-width: 900px) {
-    display: none;
+    display: none; // hide desktop nav on mobile
   }
 
   @media screen and (max-width: 1310px) {
@@ -93,11 +89,13 @@
   border-radius: 50%;
   position: relative;
 
-  display: flex;
+  display: none; // hidden by default (desktop)
   justify-content: center;
   align-items: center;
   background-color: var(--secondary-color);
   margin-right: 25px;
+  cursor: pointer;
+  z-index: 10;
 
   svg {
     width: 70%;
@@ -107,21 +105,29 @@
 
   div {
     position: fixed;
-    top: 0;
-    bottom: 0;
+    top: 80px;
     right: 0;
-    z-index: 5;
+    z-index: 1000;
 
     padding: 1rem;
+    width: 300px;
+    min-height: 200px;
+    max-height: 80vh;
 
-    // width: 40%;
-    // height: 61vh;
-    width: 80%;
-    height: 100vh;
+    @media screen and (min-width: 900px) {
+      width: 250px;
+      min-height: 150px;
+    }
+
+    @media screen and (max-width: 600px) {
+      width: 80%;
+      top: 0;
+      height: 100vh;
+    }
 
     display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
+    justify-content: flex-start;
+    align-items: flex-start;
     flex-direction: column;
 
     background-color: var(--black-color);
@@ -133,13 +139,13 @@
       height: 35px;
       color: var(--white-color);
       margin: 0.5rem 1rem;
+      align-self: flex-end;
     }
 
     ul {
       list-style: none;
       margin: 0;
       padding: 0;
-      height: 100%;
       width: 100%;
 
       display: flex;
@@ -148,7 +154,7 @@
       flex-direction: column;
 
       li {
-        margin: 1rem;
+        margin: 0.5rem 1rem;
         cursor: pointer;
 
         a {
@@ -157,7 +163,6 @@
           font-size: 1rem;
           text-transform: uppercase;
           font-weight: 500;
-
           transition: all 0.3s ease-in-out;
 
           &:hover {
@@ -166,13 +171,10 @@
         }
       }
     }
-
-    @media screen and (min-width: 900px) {
-      display: none;
-    }
   }
 
-  @media screen and (min-width: 900px) {
-    display: none;
+  /* Show hamburger only on mobile */
+  @media screen and (max-width: 900px) {
+    display: flex;
   }
 }
