@@ -28,7 +28,7 @@ function HomePage() {
 function App() {
   return (
     <Router>
-      <div className="">
+      <div className="overflow-x-hidden">
         <Navbar />
         <ScrollToTop />
         <Routes>

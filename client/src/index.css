@@ -29,9 +29,10 @@
   font-family: var(--font-family);
 }
 
-body {
+html, body {
   overflow-x: hidden;
   color: var(--text-light);
+  max-width: 100vw;
 }
 
 body::-webkit-scrollbar {
