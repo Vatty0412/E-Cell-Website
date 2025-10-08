@@ -159,7 +159,11 @@ export default function Events() {
                       <motion.div
                         key={i}
                         className="absolute w-2 h-2 rounded-full opacity-30"
-                        style={{ backgroundColor: event.color }}
+                        style={{
+                          backgroundColor: event.color,
+                          top: `${Math.random() * 80 + 10}%`,
+                          left: `${Math.random() * 80 + 10}%`,
+                        }}
                         animate={{
                           x: [0, Math.random() * 100 - 50],
                           y: [0, Math.random() * 100 - 50],
@@ -169,10 +173,6 @@ export default function Events() {
                           duration: 4 + Math.random() * 2,
                           repeat: Infinity,
                           delay: Math.random() * 2,
-                        }}
-                        style={{
-                          top: `${Math.random() * 80 + 10}%`,
-                          left: `${Math.random() * 80 + 10}%`,
                         }}
                       />
                     ))}
@@ -184,21 +184,7 @@ export default function Events() {
         </div>
 
         {/* Call to Action Section */}
-        <motion.div
-          className="mt-20 text-center bg-gray-800/30 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8 md:p-12"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-        >
-          <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
-            Ready to Join Our Next Event?
-          </h3>
-          <p className="text-gray-400 mb-6 max-w-2xl mx-auto">
-            Stay updated with our latest events and be part of the entrepreneurial journey
-          </p>
 
-        </motion.div>
       </div>
     </section>
   );
