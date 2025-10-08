@@ -1,9 +1,7 @@
 body {
-  background-image: url("./assets/Background2.png");
-  background-size: cover;
-  background-repeat: no-repeat;
+  /* Simple dark background for non-hero sections */
+  background: linear-gradient(135deg, #111827 0%, #1e293b 50%, #000000 100%);
   background-attachment: fixed;
-  background-position: center;
 }
 
 #carousel_container {
@@ -18,26 +16,7 @@ body {
   margin-top: -25px;
 }
 
-/* .inner {
-  overflow: hidden;
-  white-space: nowrap;
-  width: 0;
-  animation: typing;
-  animation-duration: 3s;
-  animation-timing-function: steps(40);
-  animation-fill-mode: forwards;
-} */
-
-@keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
-}
-
-/* Hide scrollbar for all browsers */
+/* Enhanced scrollbar hiding */
 .hide-scrollbar {
   scrollbar-width: none; /* Firefox */
   -ms-overflow-style: none; /* Internet Explorer 10+ */
@@ -45,4 +24,22 @@ body {
 
 .hide-scrollbar::-webkit-scrollbar {
   display: none; /* Chrome, Safari, Edge */
+}
+
+/* Simple dark scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1e293b;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #3b82f6;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #2563eb;
 }
