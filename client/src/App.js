@@ -10,7 +10,7 @@ import Startups from "./components/Startups/Startups";
 import Appreciation from "./components/Appreciation/Appreciation";
 import CampusAmbassadorPage from "./components/CampusAmbassador/CampusAmbassadorPage";
 import Events from "./components/Events/Events";
-
+import Gallery from './components/Gallery/gallery';
 function HomePage() {
   return (
     <div className="">
@@ -20,6 +20,7 @@ function HomePage() {
       <Appreciation />
       <Startups />
       {/* <Renaissance /> */}
+      <Gallery/>
       <GetInTouch />
     </div>
   );
