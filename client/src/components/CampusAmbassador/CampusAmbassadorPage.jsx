@@ -153,7 +153,7 @@ const CampusAmbassadorPage = () => {
 
       {/* Footer */}
       <div className="flex justify-center items-center pt-12 pb-8 text-stone-300 h-10">
-        Copyright &copy; E-Cell 2022. All rights reserved
+        Copyright &copy; E-Cell 2025. All rights reserved
       </div>
     </div>
   );
