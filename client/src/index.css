@@ -8,13 +8,17 @@
   /* --font-family: "Manrope", sans-serif; */
   --font-family: "Quicksand", sans-serif;
 
-  --primary-color: #edf2f8;
-  --secondary-color: #313bac;
-  --black-color: #030303;
-  --lightGray-color: #e4e4e4;
-  --gray-color: #6b7688;
+  /* Simple dark theme color palette */
+  --primary-color: #1e293b;
+  --secondary-color: #3b82f6;
+  --black-color: #000000;
+  --dark-color: #111827;
+  --lightGray-color: #374151;
+  --gray-color: #6b7280;
   --brown-color: #46364a;
   --white-color: #ffffff;
+  --text-light: rgba(255, 255, 255, 0.9);
+  --text-muted: rgba(255, 255, 255, 0.7);
 }
 
 * {
@@ -27,8 +31,16 @@
 
 body {
   overflow-x: hidden;
+  color: var(--text-light);
 }
 
 body::-webkit-scrollbar {
   display: none;
+}
+
+/* Simple utility classes */
+@layer utilities {
+  .glass-effect {
+    @apply bg-white/5 backdrop-blur-sm border border-white/10;
+  }
 }
