@@ -102,20 +102,25 @@ export default function Events() {
                     </div>
 
                     {/* CTA Button */}
-                    <motion.button
-                      className="px-6 py-3 rounded-lg font-medium transition-all duration-300 hover:scale-105"
-                      style={{ 
-                        backgroundColor: event.color,
-                        boxShadow: `0 4px 15px ${event.color}30`
-                      }}
-                      whileHover={{ 
-                        boxShadow: `0 8px 25px ${event.color}40`,
-                        y: -2
-                      }}
-                      whileTap={{ scale: 0.95 }}
-                    >
-                      Learn More
-                    </motion.button>
+                    {event.section === "TEDx" && (
+                      <motion.a
+                        href="https://khanak21.github.io/TEDxMNNIT/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-block px-6 py-3 rounded-lg font-medium transition-all duration-300 hover:scale-105"
+                        style={{ 
+                          backgroundColor: event.color,
+                          boxShadow: `0 4px 15px ${event.color}30`
+                        }}
+                        whileHover={{ 
+                          boxShadow: `0 8px 25px ${event.color}40`,
+                          y: -2
+                        }}
+                        whileTap={{ scale: 0.95 }}
+                      >
+                        Learn More
+                      </motion.a>
+                    )}
                   </motion.div>
                 </div>
 

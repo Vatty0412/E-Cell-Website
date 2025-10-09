@@ -102,9 +102,9 @@ const About = () => {
                 transition={{ duration: 0.8, delay: 1.6 }}
                 viewport={{ once: true }}
               >
-                <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition-colors duration-300 transform hover:scale-105">
+                {/* <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition-colors duration-300 transform hover:scale-105">
                   Learn More About Us
-                </button>
+                </button> */}
               </motion.div>
             </div>
           </motion.div>
@@ -146,4 +146,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default About;
