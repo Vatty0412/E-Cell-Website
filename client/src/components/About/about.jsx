@@ -120,7 +120,7 @@ const About = () => {
         >
           {[
             { number: "10+", label: "Years of Excellence" },
-            { number: "500+", label: "Students Impacted" },
+            { number: "5000+", label: "Students Impacted" },
             { number: "50+", label: "Events Organized" },
             { number: "20+", label: "Startups Mentored" },
           ].map((stat, index) => (
