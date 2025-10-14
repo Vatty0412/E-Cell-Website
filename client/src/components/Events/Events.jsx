@@ -1,9 +1,12 @@
 import { motion } from "framer-motion";
 import { useEffect } from "react";
+// import ren from "../../../public/gallery/Ren.png"
+// import tedx from "../../../public/gallery/Tedx.png"
 
 const events = [
   {
     section: "RENAISSANCE",
+    logo:"/gallery/Ren.png",
     color: "#3b82f6",
     description: `To encourage the entrepreneurial journey of translating thoughts into action, the flagship event of E-Cell is held annually, bringing together the academic community, new age entrepreneurs and fanatics who are passionate about ideating and innovating from all over the country. Renaissance 2025 will include a gamut of activities all of which provide an avenue to harbor entrepreneurial skills and stimulate discussion on ideas that possess the potential to turn the issues that plague us into opportunities to revolutionize the world.`,
     features: ["E-PLAN", "E-TALK", "Panel Discussions", "Business Quiz", "Internship Fair"]
@@ -11,6 +14,7 @@ const events = [
   {
     section: "TEDx",
     color: "#ef4444",
+     logo:"/gallery/Tedx.png",
     description: `At TEDx MNNIT, we believe that every idea has the spark to change the world. Through curated talks, performances, and conversations, we aim to bring together thinkers, creators, and dreamers from diverse backgrounds, empowering them to share fresh perspectives and ignite inspiration across communities. TEDx is a globally respected platform that encourages local voices to be heard on a broader stage.`,
     features: ["Curated Talks", "Live Performances", "Networking", "Innovation Showcase", "Community Building"]
   },
@@ -141,19 +145,14 @@ export default function Events() {
                       <motion.div
                         className="w-24 h-24 mx-auto mb-4 rounded-full flex items-center justify-center"
                         style={{ backgroundColor: `${event.color}20`, border: `2px solid ${event.color}` }}
-                        animate={{ 
-                          rotate: [0, 360],
-                          scale: [1, 1.1, 1]
-                        }}
                         transition={{ 
                           duration: 8, 
                           repeat: Infinity, 
                           ease: "linear"
                         }}
                       >
-                        <span className="text-2xl font-bold" style={{ color: event.color }}>
-                          {event.section.charAt(0)}
-                        </span>
+                        <img src={event.logo} alt="" className="rounded-full p-1" />
+                        
                       </motion.div>
                       <h4 className="text-white text-xl font-semibold mb-2">{event.section}</h4>
                       <p className="text-gray-400 text-sm">Annual Flagship Event</p>
