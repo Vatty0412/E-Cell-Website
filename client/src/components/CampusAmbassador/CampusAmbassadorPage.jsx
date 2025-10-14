@@ -6,33 +6,190 @@ const CampusAmbassadorPage = () => {
   // Dummy data for campus ambassadors
   const ambassadors = [
     {
-      name: "Alice Johnson",
-      college: "XYZ University",
-      certificateId: "CERT123",
+      name: "Pakhi rao",
+      college: "n/a",
+      certificateId: "n/a",
       driveLink: "https://drive.google.com/file/d/1EXAMPLE1/view?usp=sharing"
     },
     {
-      name: "Rahul Sharma",
-      college: "ABC Institute",
-      certificateId: "CERT124",
+      name: "Shivang Saxena",
+      college: "n/a",
+      certificateId: "n/a",
       driveLink: "https://drive.google.com/file/d/1EXAMPLE2/view?usp=sharing"
     },
     {
-      name: "Priya Patel",
-      college: "DEF College",
-      certificateId: "CERT125",
+      name: "Pavitra Arora",
+      college: "n/a",
+      certificateId: "n/a",
       driveLink: "https://drive.google.com/file/d/1EXAMPLE3/view?usp=sharing"
     },
     {
-      name: "Michael Chen",
-      college: "GHI University",
-      certificateId: "CERT126",
+      name: "Thippireddy Mohan Reddy",
+      college: "n/a",
+      certificateId: "n/a",
       driveLink: "https://drive.google.com/file/d/1EXAMPLE4/view?usp=sharing"
     },
     {
-      name: "Sarah Williams",
-      college: "JKL Institute",
-      certificateId: "CERT127",
+      name: "Arihant Sinha",
+      college: "n/a",
+      certificateId: "n/a",
+      driveLink: "https://drive.google.com/file/d/1EXAMPLE5/view?usp=sharing"
+    },
+    {
+      name: "Vanshit tyagi",
+      college: "n/a",
+      certificateId: "n/a",
+      driveLink: "https://drive.google.com/file/d/1EXAMPLE5/view?usp=sharing"
+    },
+    {
+      name: "Shweta Singh",
+      college: "n/a",
+      certificateId: "n/a",
+      driveLink: "https://drive.google.com/file/d/1EXAMPLE5/view?usp=sharing"
+    },
+    {
+      name: "Prashasti",
+      college: "n/a",
+      certificateId: "n/a",
+      driveLink: "https://drive.google.com/file/d/1EXAMPLE5/view?usp=sharing"
+    },
+    {
+      name: "Aniket mishra",
+      college: "n/a",
+      certificateId: "n/a",
+      driveLink: "https://drive.google.com/file/d/1EXAMPLE5/view?usp=sharing"
+    },
+    {
+      name: "kshitij",
+      college: "n/a",
+      certificateId: "n/a",
+      driveLink: "https://drive.google.com/file/d/1EXAMPLE5/view?usp=sharing"
+    },
+    {
+      name: "Nitin Chaudhary",
+      college: "n/a",
+      certificateId: "n/a",
+      driveLink: "https://drive.google.com/file/d/1EXAMPLE5/view?usp=sharing"
+    },
+    {
+      name: "Shaifali Chaudhary",
+      college: "n/a",
+      certificateId: "n/a",
+      driveLink: "https://drive.google.com/file/d/1EXAMPLE5/view?usp=sharing"
+    },
+    {
+      name: "Mukund Aggarwal",
+      college: "n/a",
+      certificateId: "n/a",
+      driveLink: "https://drive.google.com/file/d/1EXAMPLE5/view?usp=sharing"
+    },
+    {
+      name: "Deepak Kumar",
+      college: "n/a",
+      certificateId: "n/a",
+      driveLink: "https://drive.google.com/file/d/1EXAMPLE5/view?usp=sharing"
+    },
+    {
+      name: "Shivansh Dutt Tripathi ",
+      college: "n/a",
+      certificateId: "n/a",
+      driveLink: "https://drive.google.com/file/d/1EXAMPLE5/view?usp=sharing"
+    },
+    {
+      name: "Shweta Mishra",
+      college: "n/a",
+      certificateId: "n/a",
+      driveLink: "https://drive.google.com/file/d/1EXAMPLE5/view?usp=sharing"
+    },
+    {
+      name: "Nitin Shukla",
+      college: "n/a",
+      certificateId: "n/a",
+      driveLink: "https://drive.google.com/file/d/1EXAMPLE5/view?usp=sharing"
+    },
+    {
+      name: "smriti singh",
+      college: "n/a",
+      certificateId: "n/a",
+      driveLink: "https://drive.google.com/file/d/1EXAMPLE5/view?usp=sharing"
+    },
+    ,
+    {
+      name: "Niharika Singh",
+      college: "n/a",
+      certificateId: "n/a",
+      driveLink: "https://drive.google.com/file/d/1EXAMPLE5/view?usp=sharing"
+    },
+    {
+      name: "Afreen Hashmi",
+      college: "n/a",
+      certificateId: "n/a",
+      driveLink: "https://drive.google.com/file/d/1EXAMPLE5/view?usp=sharing"
+    },
+    {
+      name: "Prateek mishra",
+      college: "n/a",
+      certificateId: "n/a",
+      driveLink: "https://drive.google.com/file/d/1EXAMPLE5/view?usp=sharing"
+    },
+    {
+      name: "Kartik Sharma",
+      college: "n/a",
+      certificateId: "n/a",
+      driveLink: "https://drive.google.com/file/d/1EXAMPLE5/view?usp=sharing"
+    },
+    {
+      name: "shivanjali ojha",
+      college: "n/a",
+      certificateId: "n/a",
+      driveLink: "https://drive.google.com/file/d/1EXAMPLE5/view?usp=sharing"
+    },
+    {
+      name: "Sajal Sharma",
+      college: "n/a",
+      certificateId: "n/a",
+      driveLink: "https://drive.google.com/file/d/1EXAMPLE5/view?usp=sharing"
+    },
+    {
+      name: "Sakshi Dwivedi",
+      college: "n/a",
+      certificateId: "n/a",
+      driveLink: "https://drive.google.com/file/d/1EXAMPLE5/view?usp=sharing"
+    },
+    {
+      name: "Navya Gupta",
+      college: "n/a",
+      certificateId: "n/a",
+      driveLink: "https://drive.google.com/file/d/1EXAMPLE5/view?usp=sharing"
+    },
+    {
+      name: "Firdaus Fatima",
+      college: "n/a",
+      certificateId: "n/a",
+      driveLink: "https://drive.google.com/file/d/1EXAMPLE5/view?usp=sharing"
+    },
+    {
+      name: "Saksham Negi",
+      college: "n/a",
+      certificateId: "n/a",
+      driveLink: "https://drive.google.com/file/d/1EXAMPLE5/view?usp=sharing"
+    },
+    {
+      name: "Ragini Yadav",
+      college: "n/a",
+      certificateId: "n/a",
+      driveLink: "https://drive.google.com/file/d/1EXAMPLE5/view?usp=sharing"
+    },
+    {
+      name: "Khushi Gupta",
+      college: "n/a",
+      certificateId: "n/a",
+      driveLink: "https://drive.google.com/file/d/1EXAMPLE5/view?usp=sharing"
+    },
+    {
+      name: "Harshita Tiwari",
+      college: "n/a",
+      certificateId: "n/a",
       driveLink: "https://drive.google.com/file/d/1EXAMPLE5/view?usp=sharing"
     }
   ];
@@ -133,15 +290,16 @@ const CampusAmbassadorPage = () => {
                     <td className="py-4 px-2 text-black font-medium">{ambassador.name}</td>
                     <td className="py-4 px-2 text-black">{ambassador.college}</td>
                     <td className="py-4 px-2 text-black font-mono">{ambassador.certificateId}</td>
-                    <td className="py-4 px-2 text-center">
-                      <motion.button
+                    <td className="py-4 px-2 text-center text-black font-mono">
+                      {/* <motion.button
                         whileHover={{ scale: 1.1 }}
                         whileTap={{ scale: 0.9 }}
                         onClick={(e) => handleDownload(e, ambassador.driveLink)}
                         className="bg-blue-600 hover:bg-blue-700 text-white p-2 rounded-lg transition-colors duration-300 flex items-center justify-center mx-auto"
                       >
                         <Download size={20} />
-                      </motion.button>
+                      </motion.button> */}
+                      Releasing Soon
                     </td>
                   </motion.tr>
                 ))}
